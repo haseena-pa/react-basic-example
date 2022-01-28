@@ -1,2 +1,4 @@
 # react-basic-example
-Simple Example of React JS which will have Component, Props, Events, Import and Exports 
+Very Basic Example of React JS which will explain Component, Props, Events, Import and Exports 
+
+
