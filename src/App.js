@@ -1,22 +1,22 @@
- import {useState} from 'react';
+import { useRef } from 'react';
 function App() {
-    const [person, setPerson] = useState({
-        name: 'Haseena',
-        age: '30',
-        msg: 'Test Message'
-    });
-    
-    function changeMessage() {
-        setPerson({...person, msg: 'New message'});
+    let firstNameRef = useRef(null);
+    const saveData = (e) => {
+        e.preventDefault();
+        console.log(firstNameRef.current.innerHTML);
     }
 
     return (
-        <div>
-            <h2>{person.name}</h2>
-            <h2>{person.msg}</h2>
-            <button type="button" onClick={changeMessage}>Click me</button>
-        </div>
-    );
+        <>
+            <form onSubmit={saveData}>
+                <div ref={firstNameRef}>dfsdf</div>
+                <input type="text" name="firstName" />
+                <button type="submit">Save</button>
+            </form>
+        </>
+    )
+
+
 }
 
 export default App;
